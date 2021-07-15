@@ -27,7 +27,7 @@ export default function Page() {
     },
   ];
   return (
-    <div style={{ width:"100%",marginLeft: "65px", marginTop: "15px", marginRight: "65px" }}>
+    <div style={{ width:"100%",marginLeft: "60px", marginTop: "15px", marginRight: "60px" }}>
       <div className="d-flex flex-row status">
         {status.map((item, index) => (
           <div key={index} className="d-flex flex-row align-items-center element">

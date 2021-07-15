@@ -83,9 +83,9 @@ export default function Cards() {
       <Row>
         {cardsJune.length <= 0 && <div>There is no posts for today.</div>}
         {cardsJune.length > 0 && (
-          <Row  style={{paddingRight:"0"}}>
+          <Row style={{paddingLeft:"0", paddingRight:"0"}}>
             {cardsJune.map((card) => (
-              <Col style={{paddingRight:"0"}} key={card.id} xs={"4"}>
+              <Col style={{paddingRight:"0", paddingLeft:"30px"}}  key={card.id} xs={"4"}>
                 <Card className="main-card">
                   <div className="d-flex flex-row">
                     <div className={`style-${card.status}`}>
@@ -204,9 +204,9 @@ export default function Cards() {
       <Row>
       {cardsJuly.length <= 0 && <div className="mb-5">There is no posts for today.</div>}
         {cardsJuly.length > 0 && (
-          <Row>
+          <Row style={{paddingLeft:"0", paddingRight:"0"}}>
         {cardsJuly.map((cardJuly) => (
-          <Col key={cardJuly.id} xs={"4"}>
+          <Col style={{paddingRight:"0", paddingLeft:"30px"}} key={cardJuly.id} xs={"4"}>
             <Card className="main-card">
               <div className="d-flex flex-row">
                 <div className={`style-${cardJuly.status}`}>
