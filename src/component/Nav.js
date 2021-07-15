@@ -78,7 +78,7 @@ export default function Nav(props) {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="panel-content">
+          <div className="panel-content ">
             <SubMenus />
           </div>
         </TabPanel>
