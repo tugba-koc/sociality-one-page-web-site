@@ -12,7 +12,7 @@ export default function App() {
   const resim = `<img alt="lh" width="50px" src=${resimm}/>`;
 
   const clickHandler = (e) => {
-    if (e.target.innerText === "Feed") {
+    if (e.target.innerText === "Feed") { 
       setIsOpen(true);
       alertify.set("notifier", "position", "bottom-right");
       alertify.success(resim + " Yeah, you found it !", 3);
