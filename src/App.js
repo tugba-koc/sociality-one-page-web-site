@@ -17,7 +17,7 @@ export default function App() {
       alertify.set("notifier", "position", "bottom-right");
       alertify.success(resim + " Yeah, you found it !", 3);
     } else {
-      setIsOpen(false);
+      setIsOpen(false); 
     }
   };
 
