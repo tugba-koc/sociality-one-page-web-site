@@ -1,0 +1,82 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-card {
+  margin-top: 15px;
+  padding-right: 0px;
+  min-width: 307.06px;
+  margin-bottom: 30px;
+}
+
+.col-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.statistics-line {
+  margin-top: 15px;
+}
+
+.comment,
+.share,
+.watched {
+  margin-left: 25px;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.like {
+  font-size: 18px;
+}
+
+.style-0 {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+}
+
+.style-1 {
+  background-color: green;
+  display: flex;
+  align-items: center;
+}
+
+.style-2 {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.style-3 {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+}
+
+.style-4 {
+  background-color: red;
+  display: flex;
+  align-items: center;
+}
+
+.card-post-type {
+  font-size: 40px;
+  display: flex;
+  color: white;
+  padding: 0 10px;
+  top: 50%;
+}
+
+.head-line {
+  margin-top: 30px;
+  color: grey;
+  font-weight: 400;
+}
+
+.col-4 {
+  padding-right: 20px;
+  padding-left: 20px;
+}

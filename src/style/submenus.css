@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+}
+
+.notification {
+  color: red;
+  font-size: 15px;
+  margin-right: 15px;
+  pointer-events: none;
+}
+
+
+
+p.text-center:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.active {
+  background-color: red;
+}
+
+.active-color{
+  color:red
+}
+
+.dotted-item {
+  margin-top: 10px;
+}
+
+.accordion__button::before {
+  display: none;
+}
+
+.accordion {
+  margin-top: 15px;
+  border: 0px;
+}
+
+.accordion__button {
+  height: 40px;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
+  margin-top: 16px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.accordion__panel:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.accordion__panel {
+  padding: 0 16px;
+  float: left;
+  animation: fadein 0.35s ease-in;
+  margin-top: 0;
+  font-size: 13px;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu {
+  margin-left: 10px;
+}
+
+.white {
+  color: white;
+}
+
+.right-icon {
+  color: black;
+  margin-left: auto;
+}

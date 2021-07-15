@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Nav from "./component/Nav";
+import Page from "./component/Page";
+import "./App.css";
+import PresentDefult from "./component/PresentDefult";
+import alertify from "alertifyjs";
+import resimm from "./component/logos/sherlock.png";
 
-function App() {
+export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const resim = `<img alt="lh" width="50px" src=${resimm}/>`;
+
+  const clickHandler = (e) => {
+    if (e.target.innerText === "Feed") {
+      setIsOpen(true);
+      alertify.set("notifier", "position", "bottom-right");
+      alertify.success(resim + " Yeah, you found it !", 3);
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex flex-row App">
+      <Nav handler={(e) => clickHandler(e)} />
+      {isOpen ? <Page /> : <PresentDefult />}
     </div>
   );
 }
-
-export default App;
