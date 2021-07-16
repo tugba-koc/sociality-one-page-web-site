@@ -10,7 +10,14 @@ body {
   pointer-events: none;
 }
 
+.submenu-dot {
+  padding-top: 7px;
+}
 
+p.text-center {
+  margin-bottom: 10px;
+  margin-left: 14px;
+}
 
 p.text-center:hover {
   color: red;
@@ -21,8 +28,8 @@ p.text-center:hover {
   background-color: red;
 }
 
-.active-color{
-  color:red
+.active-color {
+  color: red;
 }
 
 .dotted-item {

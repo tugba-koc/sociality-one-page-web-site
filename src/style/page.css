@@ -1,11 +1,17 @@
 .status .element:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .status {
-    margin-top: -30px;
+  margin-top: -30px;
 }
 
 .status .element {
-    margin-left: 30px;
+  margin-left: 30px;
+}
+
+.top-title {
+  margin-top: 5px;
+  text-decoration: none;
+  color: black;
 }

@@ -18,7 +18,6 @@ export default function Part1(props) {
     e.target.querySelector("svg").classList.toggle("white");
   };
 
-
   return (
     <Accordion allowMultipleExpanded>
       {accordionData.map((item, index) => (
@@ -37,14 +36,8 @@ export default function Part1(props) {
               {item.contents ? (
                 item.contents.map((content, index) => (
                   <div key={index} className="d-flex flex-row dotted-item ">
-                    <BsDot style={{ paddingTop: "5px" }} />{" "}
-                    <p
-                      className="text-center"
-                      style={{ marginBottom: "10px", marginLeft: "14px" }}
-                      onClick={props.handler}
-                      
-                      
-                    >
+                    <BsDot className="submenu-dot" />{" "}
+                    <p className="text-center" onClick={props.handler}>
                       {content}
                     </p>{" "}
                   </div>

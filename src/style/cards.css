@@ -12,9 +12,13 @@ body {
 }
 
 .col-4 {
- margin-left: 0px;
+  margin-left: 0px;
 }
 
+.row {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .statistics-line {
   margin-top: 15px;
@@ -75,4 +79,14 @@ body {
   color: grey;
   font-weight: 400;
 }
+
+.card-icons {
+  margin-top: -8px;
+}
+
+
+.three-dots {
+  color:grey
+}
+
 

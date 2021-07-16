@@ -80,253 +80,252 @@ export default function Cards() {
     <div>
       {/* June */}
       <h2 className="head-line">17 June 2021</h2>
-      
-        {cardsJune.length <= 0 && <div>There is no posts for today.</div>}
-        {cardsJune.length > 0 && (
-          <Row style={{paddingLeft:"0", paddingRight:"0"}}>
-            {cardsJune.map((card) => (
-              <Col   key={card.id} xs={"4"}>
-                <Card className="main-card">
-                  <div className="d-flex flex-row">
-                    <div className={`style-${card.status}`}>
-                      <div>
-                        {card.account.channel === "twitter" && (
-                          <FaTwitter className="card-post-type" />
-                        )}
-                      </div>
-                      <div>
-                        {card.account.channel === "instagrambusiness" && (
-                          <FaInstagram className="card-post-type" />
-                        )}
-                      </div>
-                      <div>
-                        {card.account.channel === "facebook" && (
-                          <FaFacebookF className="card-post-type" />
-                        )}
-                      </div>
-                    </div>
-                    <CardBody>
-                      <div className="d-flex flex-row">
-                        <CardSubtitle tag="h6" className="mb-4 text-muted">
-                          {card.published_at}
-                        </CardSubtitle>
 
-                        {/* dropdown start */}
-                        <div
-                          style={{ marginTop: "-8px" }}
-                          className="dropdown ms-auto"
+      {cardsJune.length <= 0 && <div>There is no posts for today.</div>}
+      {cardsJune.length > 0 && (
+        <Row>
+          {cardsJune.map((card) => (
+            <Col key={card.id} xs={"4"}>
+              <Card className="main-card">
+                <div className="d-flex flex-row">
+                  <div className={`style-${card.status}`}>
+                    <div>
+                      {card.account.channel === "twitter" && (
+                        <FaTwitter className="card-post-type" />
+                      )}
+                    </div>
+                    <div>
+                      {card.account.channel === "instagrambusiness" && (
+                        <FaInstagram className="card-post-type" />
+                      )}
+                    </div>
+                    <div>
+                      {card.account.channel === "facebook" && (
+                        <FaFacebookF className="card-post-type" />
+                      )}
+                    </div>
+                  </div>
+                  <CardBody>
+                    <div className="d-flex flex-row">
+                      <CardSubtitle tag="h6" className="mb-4 text-muted">
+                        {card.published_at}
+                      </CardSubtitle>
+
+                      {/* dropdown start */}
+                      <div className="dropdown ms-auto card-icons">
+                        <RiDeleteBinLine
+                          onClick={() => deleteHandler(card.id)}
+                          style={{
+                            fontSize: "20px",
+                            color: "grey",
+                            marginRight: "16px",
+                          }}
+                        />
+                        <a
+                          href="/"
+                          className="three-dots"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
                         >
-                          <RiDeleteBinLine
-                            onClick={() => deleteHandler(card.id)}
+                          <BsThreeDots />
+                        </a>
+                        <ul
+                          style={{ minWidth: "30px" }}
+                          className="dropdown-menu dropdown-menu-end "
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              aaa
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              bbb
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              ccc
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* dropdown end */}
+                    </div>
+                    <CardText>{card.entry.message}</CardText>
+                    <CardImg
+                      top
+                      width="100%"
+                      src={card.entry.image}
+                      alt="Card-image"
+                      onError={(e) => onError(e)}
+                    />
+                    {/*  image end */}
+
+                    {/* like-comment-share start */}
+                    <div className="statistics-line d-flex align-items-center">
+                      {card.account.channel !== "twitter" ? (
+                        <div>
+                          <AiOutlineLike className="like" /> {card.like}
+                          <BiComment className="comment" /> {card.comment}
+                          <FiShare2 className="share" /> {card.share}
+                          <BsEye className="watched" /> {card.watched}
+                        </div>
+                      ) : (
+                        <div>
+                          <BsHeart className="like" /> {card.like}
+                          <FiShare2 className="share" /> {card.share}
+                          <BiShapeSquare className="comment" /> {card.comment}
+                          <BsEye className="watched" /> {card.watched}
+                        </div>
+                      )}
+                    </div>
+                  </CardBody>
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      )}
+
+      {/* July */}
+      <h2 className="head-line">01 July 2021</h2>
+
+      {cardsJuly.length <= 0 && (
+        <div className="mb-5">There is no posts for today.</div>
+      )}
+      {cardsJuly.length > 0 && (
+        <Row>
+          {cardsJuly.map((cardJuly) => (
+            <Col className="col" key={cardJuly.id} xs={"4"}>
+              <Card className="main-card">
+                <div className="d-flex flex-row">
+                  <div className={`style-${cardJuly.status}`}>
+                    <div>
+                      {cardJuly.account.channel === "twitter" && (
+                        <FaTwitter className="card-post-type" />
+                      )}
+                    </div>
+                    <div>
+                      {cardJuly.account.channel === "instagrambusiness" && (
+                        <FaInstagram className="card-post-type" />
+                      )}
+                    </div>
+                    <div>
+                      {cardJuly.account.channel === "facebook" && (
+                        <FaFacebookF className="card-post-type" />
+                      )}
+                    </div>
+                  </div>
+                  <CardBody>
+                    <div className="d-flex flex-row">
+                      <CardSubtitle tag="h6" className="mb-4 text-muted">
+                        {cardJuly.published_at}
+                      </CardSubtitle>
+
+                      <div className="dropdown ms-auto card-icons">
+                        {cardJuly.status === 1 && (
+                          <RiForbid2Line
                             style={{
                               fontSize: "20px",
                               color: "grey",
                               marginRight: "16px",
                             }}
                           />
-                          <a
-                            href="/"
-                            style={{
-                              color: "grey",
-                            
-                            }}
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <BsThreeDots />
-                          </a>
-                          <ul
-                            style={{ minWidth: "30px" }}
-                            className="dropdown-menu dropdown-menu-end "
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                aaa
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                bbb
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/" className="dropdown-item">
-                                ccc
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* dropdown end */}
-                      </div>
-                      <CardText>{card.entry.message}</CardText>
-                      <CardImg
-                        top
-                        width="100%"
-                        src={card.entry.image}
-                        alt="Card-image"
-                        onError={(e) => onError(e)}
-                      />
-                      {/*  image end */}
-
-                      {/* like-comment-share start */}
-                      <div className="statistics-line d-flex align-items-center">
-                        {card.account.channel !== "twitter" ? (
-                          <div>
-                            <AiOutlineLike className="like" /> {card.like}
-                            <BiComment className="comment" /> {card.comment}
-                            <FiShare2 className="share" /> {card.share}
-                            <BsEye className="watched" /> {card.watched}
-                          </div>
-                        ) : (
-                          <div>
-                            <BsHeart className="like" /> {card.like}
-                            <FiShare2 className="share" /> {card.share}
-                            <BiShapeSquare className="comment" /> {card.comment}
-                            <BsEye className="watched" /> {card.watched}
-                          </div>
                         )}
+                        {cardJuly.status === 0 && (
+                          <VscCheck
+                            style={{
+                              fontSize: "20px",
+                              color: "grey",
+                              marginRight: "16px",
+                            }}
+                          />
+                        )}
+                        <RiDeleteBinLine
+                          onClick={() => deleteHandlerJuly(cardJuly.id)}
+                          style={{
+                            fontSize: "20px",
+                            color: "grey",
+                            marginRight: "16px",
+                          }}
+                        />
+                        <a
+                          href="/"
+                          className="three-dots"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <BsThreeDots />
+                        </a>
+                        {/* dropdown start */}
+                        <ul
+                          style={{ minWidth: "30px" }}
+                          className="dropdown-menu dropdown-menu-end"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              aaa
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              bbb
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/" className="dropdown-item">
+                              ccc
+                            </a>
+                          </li>
+                        </ul>
                       </div>
-                    </CardBody>
-                  </div>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        )}
-     
 
-      {/* July */}
-      <h2 className="head-line">01 July 2021</h2>
-      
-      {cardsJuly.length <= 0 && <div className="mb-5">There is no posts for today.</div>}
-        {cardsJuly.length > 0 && (
-          <Row style={{paddingLeft:"0", paddingRight:"0"}}>
-        {cardsJuly.map((cardJuly) => (
-          <Col className="col" key={cardJuly.id} xs={"4"}>
-            <Card className="main-card">
-              <div className="d-flex flex-row">
-                <div className={`style-${cardJuly.status}`}>
-                  <div>
-                    {cardJuly.account.channel === "twitter" && (
-                      <FaTwitter className="card-post-type" />
-                    )}
-                  </div>
-                  <div>
-                    {cardJuly.account.channel === "instagrambusiness" && (
-                      <FaInstagram className="card-post-type" />
-                    )}
-                  </div>
-                  <div>
-                    {cardJuly.account.channel === "facebook" && (
-                      <FaFacebookF className="card-post-type" />
-                    )}
-                  </div>
-                </div>
-                <CardBody>
-                  <div className="d-flex flex-row">
-                    <CardSubtitle tag="h6" className="mb-4 text-muted">
-                      {cardJuly.published_at}
-                    </CardSubtitle>
-
-                    {/* dropdown start */}
-                    <div
-                      style={{ marginTop: "-8px" }}
-                      className="dropdown ms-auto"
-                    >
-                      {cardJuly.status === 1 && <RiForbid2Line style={{
-                          fontSize: "20px",
-                          color: "grey",
-                          marginRight: "16px",
-                        }}/>}
-                        {cardJuly.status === 0 && <VscCheck style={{
-                          fontSize: "20px",
-                          color: "grey",
-                          marginRight: "16px",
-                        }}/>}
-                      <RiDeleteBinLine
-                        onClick={() => deleteHandlerJuly(cardJuly.id)}
-                        style={{
-                          fontSize: "20px",
-                          color: "grey",
-                          marginRight: "16px",
-                        }}
-                      />
-                      <a
-                        href="/"
-                        style={{
-                          color: "grey",
-                         
-                        }}
-                        type="button"
-                        id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <BsThreeDots />
-                      </a>
-                      <ul
-                        style={{ minWidth: "30px" }}
-                        className="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="dropdownMenuButton1"
-                      >
-                        <li>
-                          <a href="/" className="dropdown-item">
-                            aaa
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/" className="dropdown-item">
-                            bbb
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/" className="dropdown-item">
-                            ccc
-                          </a>
-                        </li>
-                      </ul>
+                      {/* dropdown end */}
                     </div>
+                    <CardText>{cardJuly.entry.message}</CardText>
+                    <CardImg
+                      top
+                      width="100%"
+                      src={cardJuly.entry.image}
+                      alt="Card-image"
+                      onError={(e) => onError(e)}
+                    />
+                    {/*  image end */}
 
-                    {/* dropdown end */}
-                  </div>
-                  <CardText>{cardJuly.entry.message}</CardText>
-                  <CardImg
-                    top
-                    width="100%"
-                    src={cardJuly.entry.image}
-                    alt="Card-image"
-                    onError={(e) => onError(e)}
-                  />
-                  {/*  image end */}
-
-                  {/* like-comment-share start */}
-                  <div className="statistics-line d-flex align-items-center">
-                    {cardJuly.account.channel !== "twitter" ? (
-                      <div>
-                        <AiOutlineLike className="like" /> {cardJuly.like}
-                        <BiComment className="comment" /> {cardJuly.comment}
-                        <FiShare2 className="share" /> {cardJuly.share}
-                        <BsEye className="watched" /> {cardJuly.watched}
-                      </div>
-                    ) : (
-                      <div>
-                        <BsHeart className="like" /> {cardJuly.like}
-                        <FiShare2 className="share" /> {cardJuly.share}
-                        <BiShapeSquare className="comment" /> {cardJuly.comment}
-                        <BsEye className="watched" /> {cardJuly.watched}
-                      </div>
-                    )}
-                  </div>
-                </CardBody>
-              </div>
-            </Card>
-          </Col>
-        ))}
-      </Row>)}
+                    {/* like-comment-share start */}
+                    <div className="statistics-line d-flex align-items-center">
+                      {cardJuly.account.channel !== "twitter" ? (
+                        <div>
+                          <AiOutlineLike className="like" /> {cardJuly.like}
+                          <BiComment className="comment" /> {cardJuly.comment}
+                          <FiShare2 className="share" /> {cardJuly.share}
+                          <BsEye className="watched" /> {cardJuly.watched}
+                        </div>
+                      ) : (
+                        <div>
+                          <BsHeart className="like" /> {cardJuly.like}
+                          <FiShare2 className="share" /> {cardJuly.share}
+                          <BiShapeSquare className="comment" />{" "}
+                          {cardJuly.comment}
+                          <BsEye className="watched" /> {cardJuly.watched}
+                        </div>
+                      )}
+                    </div>
+                  </CardBody>
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      )}
     </div>
   );
 }

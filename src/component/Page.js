@@ -52,14 +52,7 @@ export default function Page() {
                 marginRight: "6px",
               }}
             ></div>
-            <a
-              href="/"
-              style={{
-                marginTop: "5px",
-                textDecoration: "none",
-                color: "black",
-              }}
-            >
+            <a href="/" className="top-title">
               {item.title}
             </a>
           </div>
