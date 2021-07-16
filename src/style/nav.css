@@ -41,8 +41,8 @@
 
 .react-tabs__tab--selected {
   z-index: 2;
-  border-left: 4px solid red; 
-  border-radius: -10%; 
+  border-left: 4px solid red;
+  border-radius: -10%;
   color: white;
   margin-left: -4px;
   filter: grayscale(0);
@@ -52,7 +52,7 @@
 .react-tabs__tab-panel {
   display: none;
   margin-left: 10px;
-  background-color: rgba(0, 0, 0, 0.70);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .react-tabs__tab-panel--selected {

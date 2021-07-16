@@ -25,7 +25,7 @@ export default function PresentDefult() {
         className="text-center"
         style={{ width: "60%", marginTop: "30px", fontSize: "16px" }}
       >
-        <p >
+        <p>
           <i>
             If you would like to find
             <span style={{ color: "red", fontWeight: "600" }}>

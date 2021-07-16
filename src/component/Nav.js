@@ -62,7 +62,7 @@ export default function Nav(props) {
           </Tab>
           <Tab>
             <img
-            className="logo-img"
+              className="logo-img"
               onClick={props.handler}
               width="40px"
               height="40px"
@@ -74,7 +74,7 @@ export default function Nav(props) {
 
         <TabPanel>
           <div className="panel-content">
-            <SubMenus  handler={props.handler}/>
+            <SubMenus handler={props.handler} />
           </div>
         </TabPanel>
         <TabPanel>
