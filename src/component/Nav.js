@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import SubMenus from "../component/SubMenus";
 import "../style/nav.css";
-import logo1 from "./logos/paperwork.png";
-import logo2 from "./logos/myenergy.jpg";
-import logo from "./logos/logo.png";
+import logo1 from "../logos/paperwork.png";
+import logo2 from "../logos/myenergy.jpg";
+import logo from "../logos/logo.png";
 
 export default function Nav(props) {
   return (

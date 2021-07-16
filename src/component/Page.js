@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "./Cards";
 import "../style/page.css";
-import userImg from "./logos/userImage.png";
+import userImg from "../logos/userImage.png";
 
 export default function Page() {
   const status = [
@@ -27,12 +27,21 @@ export default function Page() {
     },
   ];
   return (
-    <div style={{ width:"100%",marginLeft: "60px", marginTop: "15px", marginRight: "60px" }}>
+    <div
+      style={{
+        width: "100%",
+        marginLeft: "60px",
+        marginTop: "15px",
+        marginRight: "60px",
+      }}
+    >
       <div className="d-flex flex-row status">
         {status.map((item, index) => (
-          <div key={index} className="d-flex flex-row align-items-center element">
+          <div
+            key={index}
+            className="d-flex flex-row align-items-center element"
+          >
             <div
-              
               style={{
                 marginTop: "5px",
                 width: "15px",

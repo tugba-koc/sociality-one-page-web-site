@@ -4,7 +4,7 @@ import Page from "./component/Page";
 import "./App.css";
 import PresentDefult from "./component/PresentDefult";
 import alertify from "alertifyjs";
-import resimm from "./component/logos/sherlock.png";
+import resimm from "./logos/sherlock.png";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
