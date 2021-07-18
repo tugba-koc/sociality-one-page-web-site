@@ -1,4 +1,4 @@
-[Live](https://cocky-sammet-9adda0.netlify.app/)
+[Netlify](https://cocky-sammet-9adda0.netlify.app/)
 
 a clue to access the page of cards :
 
