@@ -1,6 +1,6 @@
 [Netlify](https://cocky-sammet-9adda0.netlify.app/)
 
-Clue :
+a clue to access the page of cards :
 
 ![sociality io -gif](https://user-images.githubusercontent.com/71395416/126066435-e5b7d40b-4d15-4e9f-9ffc-70853fefe24e.gif)
 
