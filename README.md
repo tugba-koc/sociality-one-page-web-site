@@ -1,5 +1,9 @@
 [Netlify](https://cocky-sammet-9adda0.netlify.app/)
 
+Clue :
+
+![sociality io -gif](https://user-images.githubusercontent.com/71395416/126066435-e5b7d40b-4d15-4e9f-9ffc-70853fefe24e.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
